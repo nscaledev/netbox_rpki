@@ -1,0 +1,20 @@
+# Horizon registration: https://github.com/nscaledev/horizon
+id: netbox-rpki
+name: NetBox RPKI
+summary: Models RPKI inventory and publication intent in NetBox, imports validator and provider
+  observations, and supports reviewed ROA/ASPA reconciliation and provider write-back.
+area: netops
+team: AI Network Operations Backend
+owners:
+- Mencken Davidson (@menckend)
+repos:
+- https://github.com/nscaledev/netbox_rpki
+stage: beta
+kind: experiment
+capabilities:
+- netbox-plugin
+- rpki
+- routing-intent
+- inventory-reconciliation
+watch: The nscaledev repository is designated for experimentation and evaluation; documented
+  release-gated development compatibility does not establish a production deployment.
