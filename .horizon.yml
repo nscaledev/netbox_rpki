@@ -1,8 +1,8 @@
 # Horizon registration: https://github.com/nscaledev/horizon
 id: netbox-rpki
 name: NetBox RPKI
-summary: Models RPKI inventory and publication intent in NetBox, imports validator and provider
-  observations, and supports reviewed ROA/ASPA reconciliation and provider write-back.
+summary: Enables internal Nscale adoption of RPKI inventory, publication intent, observation import,
+  reconciliation, and reviewed provider write-back in NetBox.
 area: netops
 team: AI Network Operations Backend
 owners:
@@ -18,3 +18,24 @@ capabilities:
 - inventory-reconciliation
 watch: The nscaledev repository is designated for experimentation and evaluation; documented
   release-gated development compatibility does not establish a production deployment.
+matching:
+  problem: Nscale routing operators need NetBox to hold RPKI inventory and publication intent, compare that intent with observed state, and control reviewed provider changes.
+  users:
+  - Nscale RPKI, routing, and network operators adopting the plugin internally.
+  - Nscale NetBox administrators evaluating provider and validator workflows.
+  inputs:
+  - Authored ROA and ASPA intent and policy.
+  - Validator output, hosted-provider snapshots, IRR data, and BGP observations.
+  outputs:
+  - NetBox UI, REST, and GraphQL representations of RPKI state and intent.
+  - Derivation, simulation, reconciliation, lint, and approval evidence.
+  - Reviewed provider change plans, write executions, and rollback bundles.
+  integrations:
+  - Nscale NetBox deployments on NetBox 4.5.x
+  - Routinator
+  - Krill and the ARIN RPKI API
+  - IRRd-compatible services
+  boundaries:
+  - The nscaledev repository is for experimentation and evaluation, not a production-deployment claim.
+  - Subsystems have independent GA, beta, or experimental maturity.
+  - Provider writes require explicit reviewed change and approval workflows.
