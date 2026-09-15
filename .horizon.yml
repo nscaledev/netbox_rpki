@@ -39,3 +39,19 @@ matching:
   - The nscaledev repository is for experimentation and evaluation, not a production-deployment claim.
   - Subsystems have independent GA, beta, or experimental maturity.
   - Provider writes require explicit reviewed change and approval workflows.
+semantic_documents:
+- id: repository-summary
+  path: README.md
+  heading: Summary
+- id: task-taxonomy
+  path: HOW_TO.md
+  heading: Table Of Contents
+- id: registry-architecture
+  path: CONTRIBUTING.md
+  heading: Core architecture
+- id: intent-current-state
+  path: docs/intent_authority_ux_recommendations.md
+  heading: Current-State Inventory
+- id: routinator-integration
+  path: devrun/SERVICE_CONFIGURATION.md
+  heading: Routinator
